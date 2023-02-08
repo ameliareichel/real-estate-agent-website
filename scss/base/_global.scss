@@ -1,5 +1,18 @@
 //Global styles:
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 0 30px;
+}
+
+p {
+    color: $secondary-font-color;
+    font-family: $secondary-font;
 }

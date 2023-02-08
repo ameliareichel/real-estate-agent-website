@@ -1,0 +1,19 @@
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: rgba(0, 0, 0, 0.436) 0px 0px 50px;
+
+    span {
+        font-family: $primary-font;
+        color: $secondary-color;
+        font-weight: 800;
+    }
+
+    .footer-content {
+        color: $primary-font-color;
+        font-family: $primary-font;
+        font-weight: 600;
+    }
+}

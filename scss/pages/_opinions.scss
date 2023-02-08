@@ -1,0 +1,47 @@
+#opinions {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    .opinions-heading {
+        @include h2;
+        position: relative;
+    }
+
+    .opinions-card {
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.313) 0px 20px 20px;
+        text-align: left;
+        font-size: 14px;
+        padding: 10px;
+        margin: 40px 0;
+        margin-top: 30px;
+        transition: all 0.5s;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: rgba(0, 0, 0, 0.489) 0px 30px 20px;
+        }
+
+        .opinion-username {
+            color: $primary-font-color;
+            font-size: 16px;
+            font-weight: 800;
+            font-family: $primary-font;
+            margin-bottom: 0;
+        }
+
+        hr {
+            text-align: left;
+            display: inline-block;
+            margin: 0;
+            width: 50%;
+            height: 1px;
+            background-color: $secondary-color;
+        }
+
+        .opinion-content {
+            font-family: $secondary-font;
+        }
+    }
+}

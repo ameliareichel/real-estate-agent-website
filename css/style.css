@@ -237,13 +237,36 @@ input[type=checkbox], input[type=radio] {
   padding: 0;
 }
 
-body {
-  overflow: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+section {
+  padding: 0 30px;
+}
+
+p {
+  color: #38414c;
+  font-family: "Inter", sans-serif;
+}
+
+#header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: rgb(0, 0, 0) 0px 0px 60px;
+  z-index: 1000;
+}
 #header .navigation-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 30px;
 }
 #header .navigation-container .logo {
@@ -251,20 +274,38 @@ body {
   height: 80px;
   margin-left: -15px;
 }
+#header .navigation-container .logo-description {
+  color: #000b16;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
 #header .navigation-container .hamburger-menu {
-  margin-top: 30px;
+  margin-left: 15px;
+  font-size: 30px;
+  color: #588ABD;
+  position: relative;
+  z-index: 10;
+}
+#header .navigation-container .hamburger-menu:hover {
+  cursor: pointer;
+}
+#header .navigation-container .color-change {
+  color: #fff;
 }
 #header .navigation-container .navigation .nav-list {
+  display: none;
   position: fixed;
-  text-align: center;
+  text-align: right;
   top: 0;
   right: 0;
   list-style: none;
   margin: 0;
   padding: 50px;
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 30px;
-  background-color: #588ABD;
+  padding-right: 30px;
+  background-image: linear-gradient(transparent, #588ABD 70%, transparent);
+  z-index: 0;
 }
 #header .navigation-container .navigation .nav-list .nav-item {
   line-height: 30px;
@@ -282,4 +323,322 @@ body {
   cursor: pointer;
   font-weight: 700;
   text-shadow: #fff 0px 0px 12px;
+}
+#header .navigation-container .navigation .unfolded-menu {
+  display: block;
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: rgba(0, 0, 0, 0.436) 0px 0px 50px;
+}
+#footer span {
+  font-family: "Playfair Display", serif;
+  color: #588ABD;
+  font-weight: 800;
+}
+#footer .footer-content {
+  color: #000b16;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+}
+
+#home {
+  height: 100vh;
+  background-image: url("../resources/home-page-img.jpg");
+  background-size: cover;
+  background-position: left;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+#home .scroll-down {
+  width: 100px;
+  filter: drop-shadow(#000 0px 0px 4px);
+}
+#home .scroll-down:hover {
+  cursor: pointer;
+}
+
+#about {
+  margin: 40px auto;
+  text-align: center;
+}
+#about .about-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  color: #588ABD;
+  font-size: 20px;
+  border: 2px solid #588ABD;
+  padding: 10px;
+  width: 100px;
+  position: relative;
+}
+#about .about-heading::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #588ABD;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+#about .about-heading:hover {
+  cursor: pointer;
+}
+#about .about-heading:hover::after {
+  top: 5px;
+  left: 5px;
+}
+#about .about-description {
+  margin-top: 10px;
+  text-align: left;
+}
+#about .about-img {
+  width: 100%;
+}
+
+#offers {
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #e2eaf3;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+#offers .offers-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  color: #588ABD;
+  font-size: 20px;
+  border: 2px solid #588ABD;
+  padding: 10px;
+  width: 100px;
+  position: relative;
+  margin: 20px 30px;
+  margin-bottom: 30px;
+}
+#offers .offers-heading::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #588ABD;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+#offers .offers-heading:hover {
+  cursor: pointer;
+}
+#offers .offers-heading:hover::after {
+  top: 5px;
+  left: 5px;
+}
+#offers .card-container {
+  position: relative;
+}
+#offers .card-container .offers-img {
+  width: 100%;
+  transition: all 0.3s;
+  position: relative;
+  z-index: -1;
+}
+#offers .card-container .offers-img:hover {
+  transform: scale(1.1);
+}
+#offers .card-container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #588ABD;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 20px;
+  opacity: 0;
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+#offers .card-container a:hover {
+  opacity: 0.8;
+}
+
+#opinions {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#opinions .opinions-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  color: #588ABD;
+  font-size: 20px;
+  border: 2px solid #588ABD;
+  padding: 10px;
+  width: 100px;
+  position: relative;
+}
+#opinions .opinions-heading::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #588ABD;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+#opinions .opinions-heading:hover {
+  cursor: pointer;
+}
+#opinions .opinions-heading:hover::after {
+  top: 5px;
+  left: 5px;
+}
+#opinions .opinions-card {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.313) 0px 20px 20px;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+  margin: 40px 0;
+  margin-top: 30px;
+  transition: all 0.5s;
+}
+#opinions .opinions-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.489) 0px 30px 20px;
+}
+#opinions .opinions-card .opinion-username {
+  color: #000b16;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0;
+}
+#opinions .opinions-card hr {
+  text-align: left;
+  display: inline-block;
+  margin: 0;
+  width: 50%;
+  height: 1px;
+  background-color: #588ABD;
+}
+#opinions .opinions-card .opinion-content {
+  font-family: "Inter", sans-serif;
+}
+
+#contact {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(60deg, rgba(88, 138, 189, 0.8), rgba(136, 25, 255, 0.8));
+}
+#contact .contact-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  font-family: "Playfair Display", serif;
+  color: #588ABD;
+  font-size: 20px;
+  border: 2px solid #588ABD;
+  padding: 10px;
+  width: 100px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+}
+#contact .contact-heading::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #588ABD;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+#contact .contact-heading:hover {
+  cursor: pointer;
+}
+#contact .contact-heading:hover::after {
+  top: 5px;
+  left: 5px;
+}
+#contact .contact-heading::after {
+  background-color: #fff;
+}
+#contact #contact-form {
+  padding-top: 20px;
+}
+#contact #contact-form label {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  color: #fff;
+  display: block;
+  margin: 5px 0;
+  font-weight: 300;
+}
+#contact #contact-form input {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  color: #fff;
+  margin-bottom: 15px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  caret-color: #fff;
+  width: 98%;
+  transition: all 0.1s;
+}
+#contact #contact-form input:focus {
+  border-bottom: 2px solid #fff;
+}
+#contact #contact-form textarea {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  width: 98%;
+  resize: none;
+  outline: none;
+  transition: all 0.1s;
+}
+#contact #contact-form textarea:focus {
+  border-bottom: 2px solid #fff;
 }/*# sourceMappingURL=style.css.map */

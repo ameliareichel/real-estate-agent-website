@@ -13,9 +13,8 @@
     <header id="header">
         <div class="navigation-container">
             <img class="logo" src="resources/house-icon.png" alt="">
-            <div class="hamburger-menu">
-                <img src="resources/hamburger-icon.png" alt="">
-            </div>
+            <p class="logo-description">Agent Nieruchomości</p>
+            <div class="hamburger-menu">☰</div>
             <nav class="navigation">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#home">Home</a></li>
@@ -27,6 +26,74 @@
             </nav>
         </div>
     </header>
+    <section id="home">
+        <a href="#about">
+            <img class="scroll-down" src="resources/white-arrow.png" alt="">
+        </a>
+    </section>
+    <section id="about">
+        <h2 class="about-heading">O mnie</h2>
+        <p class="about-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore dicta
+            modi adipisci ullam nemo consequatur nihil, facilis, ut nesciunt nostrum doloribus fugiat eveniet,
+            blanditiis itaque corrupti cupiditate ad voluptas?</p>
+        <img class="about-img" src="resources/about-img.jpg" alt="">
+    </section>
+    <section id="offers">
+        <h2 class="offers-heading">Oferty</h2>
+        <div class="card-container">
+            <img class="offers-img" src="resources/offers-1.jpg" alt="">
+            <a href="#">Offer 1</a>
+        </div>
+        <div class="card-container">
+            <img class="offers-img" src="resources/offers-2.jpg" alt="">
+            <a href="#">Offer 2</a>
+        </div>
+        <div class="card-container">
+            <img class="offers-img" src="resources/offers-3.jpg" alt="">
+            <a href="#">Offer 3</a>
+        </div>
+    </section>
+    <section id="opinions">
+        <h2 class="opinions-heading">Opinie</h2>
+        <div class="opinions-card">
+            <h4 class="opinion-username">Katarzyna Kowalska</h4>
+            <hr>
+            <p class="opinion-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate facere autem
+                ad, quia perspiciatis suscipit reprehenderit tempore repellendus? Quisquam possimus unde doloribus.
+                Totam hic neque nesciunt perferendis ducimus quo aut?</p>
+        </div>
+        <div class="opinions-card">
+            <h4 class="opinion-username">Jan Nowak</h4>
+            <hr>
+            <p class="opinion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tempora
+                nesciunt tenetur beatae quae animi, deserunt sit consequuntur eum repellat iusto ex fugit nulla
+                voluptatem iure hic quos reprehenderit qui!</p>
+        </div>
+        <div class="opinions-card">
+            <h4 class="opinion-username">Anna Nowicka</h4>
+            <hr>
+            <p class="opinion-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore nesciunt
+                accusantium necessitatibus architecto maxime magni mollitia, nulla autem earum impedit id ut nemo
+                consequatur animi accusamus provident facilis nam. Mollitia!</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2 class="contact-heading">Contact</h2>
+        <form id="contact-form" action="">
+            <label for="name" name="name">Name</label>
+            <input type="text">
+            <label for="email" name="email">Email</label>
+            <input type="text">
+            <label for="phone" name="phone">Phone Number</label>
+            <input type="text">
+            <label for="message" name="message">Message</label>
+            <textarea name="message" id="message" maxlength="700"></textarea>
+        </form>
+    </section>
+    <footer id="footer">
+        <span>©2023</span>
+        <p class="footer-content">Agent Nieruchomości</p>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>

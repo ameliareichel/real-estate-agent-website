@@ -1,8 +1,16 @@
 #header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgb(0, 0, 0) 0px 0px 60px;
+    z-index: 1000;
 
     .navigation-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         padding: 0 30px;
 
         .logo {
@@ -11,23 +19,44 @@
             margin-left: -15px;
         }
 
+        .logo-description {
+            color: $primary-font-color;
+            font-family: $primary-font;
+            font-weight: 700;
+        }
+
         .hamburger-menu {
-            margin-top: 30px;
+            margin-left: 15px;
+            font-size: 30px;
+            color: $secondary-color;
+            position: relative;
+            z-index: 10;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .color-change {
+            color: #fff;
         }
 
         .navigation {
 
             .nav-list {
+                display: none;
                 position: fixed;
-                text-align: center;
+                text-align: right;
                 top: 0;
                 right: 0;
                 list-style: none;
                 margin: 0;
                 padding: 50px;
-                padding-top: 70px;
+                padding-top: 80px;
                 padding-bottom: 30px;
-                background-color: $secondary-color;
+                padding-right: 30px;
+                background-image: linear-gradient(transparent, $secondary-color 70%, transparent);
+                z-index: 0;
 
                 .nav-item {
                     line-height: 30px;
@@ -48,6 +77,10 @@
                         }
                     }
                 }
+            }
+
+            .unfolded-menu {
+                display: block;
             }
         }
     }
