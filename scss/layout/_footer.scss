@@ -17,3 +17,9 @@
         font-weight: 600;
     }
 }
+
+@media all and (min-width: $small-size) {
+    #footer {
+        padding: 0 60px;
+    }
+}

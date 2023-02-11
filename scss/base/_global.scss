@@ -16,3 +16,23 @@ p {
     color: $secondary-font-color;
     font-family: $secondary-font;
 }
+
+.arrow-up {
+    display: none;
+    position: fixed;
+    bottom: 3px;
+    right: 0;
+    z-index: 1000;
+
+    .arrow-up-img {
+        width: 68px;
+        filter: drop-shadow(#000 0px 0px 10px);
+    }
+}
+
+@media all and (min-width: $small-size) {
+
+    section {
+        padding: 0 60px;
+    }
+}

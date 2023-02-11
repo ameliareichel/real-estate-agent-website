@@ -7,12 +7,106 @@
         position: relative;
     }
 
-    .about-description {
-        margin-top: 10px;
-        text-align: left;
-    }
+    .about-content {
 
-    .about-img {
-        width: 100%;
+        .about-description {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .about-img {
+            width: 100%;
+        }
+    }
+}
+
+@media all and (min-width: $medium-size) {
+    #about {
+
+        .about-content {
+            display: flex;
+            // flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+
+            .about-description {
+                display: inline-block;
+                order: 1;
+                flex-basis: 50%;
+                line-height: 30px;
+                margin: 0 20px;
+            }
+
+            .about-img {
+                width: 38%;
+                order: 0;
+            }
+        }
+
+        .social-media {
+            order: 3;
+
+            .btn {
+                margin-top: 20px;
+                border: 1px solid #fff;
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+
+            .linkedin {
+                background-image: linear-gradient(60deg, #2793ff, #3e52b7);
+                filter: drop-shadow(#3e52b7 0px 0px 8px);
+            }
+
+            .instagram {
+                background-image: linear-gradient(60deg, #8a3ab9, #bc2a8d, #fccc63);
+                filter: drop-shadow(#bc2a8d 0px 0px 8px);
+
+                &::after {
+                    left: -120px;
+                }
+
+                &:hover {
+
+                    &::after {
+                        left: 100px;
+                    }
+                }
+            }
+
+            .facebook {
+                background-image: linear-gradient(60deg, #2793ff, #3e52b7);
+                filter: drop-shadow(#3e52b7 0px 0px 8px);
+            }
+        }
+    }
+}
+
+@media all and (min-width: $extra-large-size) {
+    #about {
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 60px;
+
+            .about-description {
+                display: inline-block;
+                order: 1;
+                flex-basis: 50%;
+                line-height: 30px;
+                margin: 0 20px;
+            }
+
+            .about-img {
+                width: 25%;
+                order: 0;
+            }
+        }
     }
 }

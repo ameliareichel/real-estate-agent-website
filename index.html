@@ -12,20 +12,27 @@
 <body>
     <header id="header">
         <div class="navigation-container">
-            <img class="logo" src="resources/house-icon.png" alt="">
-            <p class="logo-description">Agent Nieruchomości</p>
-            <div class="hamburger-menu">☰</div>
-            <nav class="navigation">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#home">Home</a></li>
-                    <li class="nav-item"><a href="#about">O mnie</a></li>
-                    <li class="nav-item"><a href="#offers">Oferty</a></li>
-                    <li class="nav-item"><a href="#opinions">Opinie</a></li>
-                    <li class="nav-item"><a href="#contact">Kontakt</a></li>
-                </ul>
-            </nav>
+            <div class="logo-container">
+                <img class="logo" src="resources/house-icon.png" alt="">
+                <p class="logo-description">Agent Nieruchomości</p>
+            </div>
+            <div class="nav-container">
+                <div class="hamburger-menu">☰</div>
+                <nav class="navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#about">O mnie</a></li>
+                        <li class="nav-item"><a href="#offers">Oferty</a></li>
+                        <li class="nav-item"><a href="#opinions">Opinie</a></li>
+                        <li class="nav-item"><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
+    <a class="arrow-up" href="#">
+        <img class="arrow-up-img" src="resources/white-double-arrow.png" alt="">
+    </a>
     <section id="home">
         <a href="#about">
             <img class="scroll-down" src="resources/white-arrow.png" alt="">
@@ -33,10 +40,17 @@
     </section>
     <section id="about">
         <h2 class="about-heading">O mnie</h2>
-        <p class="about-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore dicta
-            modi adipisci ullam nemo consequatur nihil, facilis, ut nesciunt nostrum doloribus fugiat eveniet,
-            blanditiis itaque corrupti cupiditate ad voluptas?</p>
-        <img class="about-img" src="resources/about-img.jpg" alt="">
+        <div class="about-content">
+            <p class="about-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam tempore dicta
+                modi adipisci ullam nemo consequatur nihil, facilis, ut nesciunt nostrum doloribus fugiat eveniet,
+                blanditiis itaque corrupti cupiditate ad voluptas?</p>
+            <img class="about-img" src="resources/about-img.jpg" alt="">
+            <div class="social-media">
+                <button class="btn linkedin"><a href="#">LinkedIn</a></button>
+                <button class="btn instagram"><a href="#">Instagram</a></button>
+                <button class="btn facebook"><a href="#">Facebook</a></button>
+            </div>
+        </div>
     </section>
     <section id="offers">
         <h2 class="offers-heading">Oferty</h2>
@@ -78,18 +92,21 @@
         </div>
     </section>
     <section id="contact">
-        <h2 class="contact-heading">Kontakt</h2>
-        <form id="contact-form" action="">
-            <label for="name" name="name">Imię</label>
-            <input type="text">
-            <label for="email" name="email">Email</label>
-            <input type="text">
-            <label for="phone" name="phone">Numer telefonu</label>
-            <input type="text">
-            <label for="message" name="message">Wiadomość</label>
-            <textarea name="message" id="message" maxlength="700"></textarea>
-            <input type="submit">
-        </form>
+        <div class="contact-container">
+            <h2 class="contact-heading">Kontakt</h2>
+            <form id="contact-form" action="">
+                <label for="name" name="name">Imię</label>
+                <input type="text">
+                <label for="email" name="email">Email</label>
+                <input type="text">
+                <label for="phone" name="phone">Numer telefonu</label>
+                <input type="tel">
+                <label for="message" name="message">Wiadomość</label>
+                <textarea name="message" id="message" maxlength="700"></textarea>
+                <button class="btn" type="submit">Wyślij</button>
+            </form>
+        </div>
+        <div class="contact-img"></div>
     </section>
     <footer id="footer">
         <span>©2023</span>
